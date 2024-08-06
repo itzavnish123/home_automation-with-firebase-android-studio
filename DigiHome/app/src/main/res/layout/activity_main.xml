@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#3F51B5"
+    tools:context=".MainActivity">
+
+    <!-- Dashboard Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="16dp"
+        android:background="#3F51B5">
+
+        <TextView
+            android:id="@+id/device_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Dashboard"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:background="@drawable/rounded_corner_blue">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_gravity="center">
+
+            <!-- My Account -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+                    <TextView
+                        android:id="@+id/on_off_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#333333"
+                        android:textSize="12sp"/>
+                    <Switch
+                        android:id="@+id/switch_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_lightbulb"
+                        android:layout_below="@+id/switch_light"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Light"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:textSize="18sp"
+                        android:layout_below="@id/image1"/>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Inventory -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="16dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+                    <TextView
+                        android:id="@+id/on_off_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#333333"
+                        android:textSize="12sp"/>
+                    <Switch
+                        android:id="@+id/switch_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_tv"
+                        android:layout_below="@+id/switch_tv"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="TV"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:textSize="18sp"
+                        android:layout_below="@id/image2"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Search Mechanic -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="16dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+                    <TextView
+                        android:id="@+id/on_off_ac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#333333"
+                        android:textSize="12sp"/>
+                    <Switch
+                        android:id="@+id/switch_ac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/air_conditioner"
+                        android:layout_below="@+id/switch_ac"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="AC"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:textSize="18sp"
+                        android:layout_below="@id/image3"/>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Request -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="16dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+                    <TextView
+                        android:id="@+id/on_off_fan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#333333"
+                        android:textSize="12sp"/>
+                    <Switch
+                        android:id="@+id/switch_fan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_fan"
+                        android:layout_below="@+id/switch_fan"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/image4">
+
+                        <TextView
+                            android:id="@+id/fan1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fan"
+                            android:textStyle="bold"
+                            android:textColor="#333333"
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:id="@+id/fan_controller"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="28dp"
+                            android:clickable="true"
+                            android:textStyle="bold"
+                            android:textColor="#333333"
+                            android:textSize="32sp"/>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    
+
+</LinearLayout>
